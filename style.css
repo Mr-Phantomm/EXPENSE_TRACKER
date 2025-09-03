@@ -1,0 +1,63 @@
+/* colors :37353E  -->dark
+44444E
+715A5A
+D3DAD9
+*/
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:"Sansation", sans-serif;
+    background-color: #44444E ;
+    display:flex;
+    /* justify-content: center;
+    align-items:center; */
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+header{
+    width:100%;
+    background-color: #37353E;
+    color:#D3DAD9;
+    padding: 15px 20px;
+}
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.layout{
+    display:flex;
+    min-height:calc(100vh - 60px);
+}
+.sidebar{
+    width:200px;
+    background: #413f47;
+    padding:20px 0;
+}
+.sidebar ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    
+}
+.sidebar ul li{
+    margin-bottom:15px;
+    /* border:1px white solid; */
+
+}
+.sidebar ul li a{
+    color:#D3DAD9;
+    text-decoration: none;
+    padding:10px ;
+    width:100%;
+    display:block;
+    box-sizing: border-box;
+}
+main{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
