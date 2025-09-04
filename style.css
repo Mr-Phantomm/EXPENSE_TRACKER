@@ -104,9 +104,17 @@ main{
     font-size:1.5rem;    
 
 }
+#right{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    margin-left:10px;
+    gap:10px;
+    
+}
 #right-top{
     flex-grow:1;
-    margin-left:10px;
+    
     /* padding:10px; */
     /* border:1px solid white; */
 }
@@ -143,7 +151,7 @@ main{
     font-size:1rem;
 }
 .form-group input[type="text"]{
-    width:100;
+    width:100%;
     padding:8px;
     background-color: #44444e;
      border:1px solid #715a5a;
@@ -152,6 +160,24 @@ main{
     box-sizing: border-box;
     font-size:1rem;
 
+}
+.form-group input[type="textbox"]{
+    width:100%;
+    padding:8px;
+    background-color: #44444e;
+     border:1px solid #715a5a;
+    color:#D3DAD9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size:1rem;
+
+}
+.form-group input[type="textbox"]:focus{
+    outline:none;
+    border-color:#d3dad9;
+}
+.form-group input[type="textbox"]::placeholder{
+    color:#d3dad96c;
 }
 .form-group select:focus{
     outline:none;
@@ -162,7 +188,7 @@ main{
     border-color:#d3dad9;
 }
 .form-group input[type="text"]::placeholder{
-    color:#d3dad9;
+    color:#d3dad96c;
 }
 
 .form-group input[type="number"]{
@@ -181,7 +207,7 @@ main{
     border-color:#d3dad9;
 }
 .form-group input[type="number"]::placeholder{
-    color:#d3dad9;
+    color:#d3dad96c;
 }
 .checkbox-group{
     display:flex;
@@ -193,4 +219,59 @@ main{
     margin-right:10px;
     cursor:pointer;
     accent-color:#715A5A;
+}
+
+.expense-form button{
+    width:100%;
+    padding:5px;
+    background:#44444e;
+    color:#D3DAD9;
+    border:1px solid #715A5A;
+    font-family: "Sansation";
+    font-size:1rem;
+}
+.expense-form button:hover{
+    background: linear-gradient(to right,#5a4a4a,#715A5A);
+}
+
+#right-bottom{
+    min-height:40vh;
+    border:1px solid #715A5A;
+    border-radius:10px;
+    padding:10px;
+    background-color: #37353E;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap:10px;
+    min-height:150px;
+
+}
+#right-bottom h3{
+    font-size:1.3rem;
+}
+#list-of-expenses{
+    margin-top:10px;
+    width:100%;
+    border-collapse: collapse;
+}
+#list-of-expenses tr td , th,#list-of-expenses{
+    border:1px solid #D3DAD9;
+}
+#list-of-expenses tr td{
+    padding-left:10px;
+}
+#right-bottom button{
+    padding:10px;
+    align-self:flex-end;
+    justify-self: end;
+    cursor:pointer;
+    border:1px solid #715A5A;
+    color: #d3dad9;
+    background-color: #44444e;
+
+
+}
+#right-bottom button:hover{
+    background-color: #5a4a4a;
 }
