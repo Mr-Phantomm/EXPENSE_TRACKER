@@ -104,6 +104,17 @@ main{
     font-size:1.5rem;    
 
 }
+#checklist {
+    list-style: none;
+    padding: 10px;
+    color: #D3DAD9;
+}
+
+#checklist li {
+    padding: 5px 0;
+    border-bottom: 1px solid #715A5A;
+    font-size:1rem;
+}
 #right{
     flex-grow:1;
     display:flex;
