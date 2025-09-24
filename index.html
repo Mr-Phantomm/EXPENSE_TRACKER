@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Asimovian&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Expense Tracker</title>
   </head>
@@ -22,13 +23,14 @@
     <div class="layout">
       <nav class="sidebar">
         <ul>
-          <li><a href="#">Personal Expense</a></li>
-          <li><a href="#">Group Expense</a></li>
+          <li><a href="#" class="sidebar-link active" data-view="personal">Personal Expense</a></li>
+          <li><a href="#" class="sidebar-link" data-view="group">Group Expense</a></li>
         </ul>
       </nav>
-
-      <main>
-        <div id="middle">
+      <div id="personal">
+        <main>
+          <div id="middle">
+        
           <div class="user-profile">
             <img src="assets/bear.png" alt="User Image" class="user-photo" />
             <h3 class="user-name">Arun</h3>
@@ -37,8 +39,8 @@
             <h4>Future Expenses</h4>
             <ul id="checklist"></ul>
           </div>
-        </div>
-        <div id="right">
+          </div>
+          <div id="right">
           <div id="right-top">
             <form id="expense-form" class="expense-form">
               <h4>Add Expense</h4>
@@ -72,7 +74,7 @@
               </div>
                <div class="form-group">
                  <label for="Description">Description </label>
-                <input type="textbox" id="Description" placeholder="Describe Expense"/>
+                <input type="text" id="Description" placeholder="Describe Expense"/>
               </div>
               <div class="form-group checkbox-group">
                 <input type="checkbox" id="add-to-checklist" />
@@ -99,8 +101,28 @@
             </table>
             <button>Analyze</button>
           </div>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
+      <div id="group">
+        <main>
+          <div id="group-middle">
+            <div id="group-top">
+              <i class="fa-solid fa-plus" id="group-add-icon"></i>            
+            </div>
+            <div id="group-bottom">
+
+            </div>
+          </div>
+          <div id="group-right">
+            <div id="group-creation">
+              <form id="group-creation-form">
+                <input type="text" id="">
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

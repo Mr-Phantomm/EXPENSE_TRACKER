@@ -7,7 +7,12 @@ const description=document.querySelector("#Description");
 const futureCheck=document.querySelector("#add-to-checklist");
 const expenseTable = document.querySelector("#list-of-expenses");
 const futurelist=document.querySelector("#checklist");
+const sidebarLinks=document.querySelectorAll(".sidebar-link")
+const personalView=document.querySelector("#personal");
+const groupView=document.querySelector("#group");
+const groupAddIcon=document.querySelector("#group-add-icon");
 let expenseCounter = 1;
+let currentView="personal";
 
 
  const savedExpense=JSON.parse(localStorage.getItem('expense'))||[];
@@ -80,3 +85,24 @@ expenseForm.addEventListener('submit',(e)=>{
     savedExpense.push(expensenow);
     localStorage.setItem('expense',JSON.stringify(savedExpense));
 });
+
+sidebarLinks.forEach((link)=>{
+
+    link.addEventListener("click",(e)=>{
+        e.preventDefault();
+        sidebarLinks.forEach((activeClass)=>activeClass.classList.remove("active"));
+        link.classList.add("active");
+        
+        currentView=link.dataset.view;
+
+        if(currentView==="personal"){
+            personalView.style.display="flex";
+            groupView.style.display="none";
+        }
+        else{
+            personalView.style.display="none";
+            groupView.style.display="flex";
+        }
+
+    })
+})

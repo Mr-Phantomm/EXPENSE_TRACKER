@@ -31,9 +31,9 @@ header{
     min-height:calc(100vh - 60px);
 }
 .sidebar{
-    width:200px;
+    min-width:170px;
     background: #413f47;
-    padding:20px 0;
+    /* padding:20px 0; */
 }
 .sidebar ul{
     list-style:none;
@@ -58,8 +58,15 @@ header{
     border:2px #D3DAD9 solid;
     transition: border 0.3s ease;
 }
-
-main{
+.sidebar .active{
+    background-color: #37353c;
+}
+#personal{
+    display:flex;
+    flex-grow:1;
+    width:100%;
+}
+#personal main{
     flex-grow:1;
     display:flex;
     justify-content: left;
@@ -285,4 +292,44 @@ main{
 }
 #right-bottom button:hover{
     background-color: #5a4a4a;
+}
+
+#group{
+    display:none;
+}
+#group main{
+    flex-grow:1;
+    display:flex;
+    gap:20px;
+    padding:20px;
+    max-height:100%;
+    
+    
+}
+#group #group-middle{
+    min-width:400px;
+    max-width:600px;   
+    background-color: #00000065; 
+    border-radius:10px;
+}
+#group #group-middle #group-top{
+    display:flex;
+    flex-direction: row-reverse;
+    background-color: #08070776;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-height:40px;
+}
+#group #group-middle #group-top #group-add-icon{
+    color:#D3DAD9;
+    padding:20px;
+    font-size:20px;
+}
+#group-creation{
+    background-color: #37353E;
+    border:1px solid #715a5a;
+    border-radius:10px;
+    max-width: 600px;
+    min-width: 600px;
+    height:100%;
 }
