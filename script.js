@@ -11,8 +11,19 @@ const sidebarLinks=document.querySelectorAll(".sidebar-link")
 const personalView=document.querySelector("#personal");
 const groupView=document.querySelector("#group");
 const groupAddIcon=document.querySelector("#group-add-icon");
+const groupRight=document.querySelector("#group-right")
+
+let currentGroupRight="groupCreate";
 let expenseCounter = 1;
 let currentView="personal";
+
+groupAddIcon.addEventListener("click",()=>{
+    if(groupRight.style.display=="none"){
+    groupRight.style.display="flex";
+    
+}
+
+})
 
 
  const savedExpense=JSON.parse(localStorage.getItem('expense'))||[];

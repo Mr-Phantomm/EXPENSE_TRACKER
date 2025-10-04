@@ -108,17 +108,35 @@
         <main>
           <div id="group-middle">
             <div id="group-top">
+              <span >Groups</span>
               <i class="fa-solid fa-plus" id="group-add-icon"></i>            
             </div>
             <div id="group-bottom">
-
+              <ul id="list-of-Groups">
+                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
+                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
+                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
+              </ul>
             </div>
           </div>
           <div id="group-right">
-            <div id="group-creation">
+            <div id="group-creation" data-group="groupCreate">
               <form id="group-creation-form">
-                <input type="text" id="">
+                <label for="group-name">Group name </label>
+                <input type="text" id="group-name" >
+                <label for="group-description">Group Description</label>
+                <input type="text" id="group-description">
+                <
               </form>
+            </div>
+            
+            
+            <div id="group-expense-addition" data-group="groupAddExpense">
+              
+            </div>
+
+            <div id="group-details" data-group="groupDetails">
+              
             </div>
           </div>
         </main>
