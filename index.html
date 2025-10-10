@@ -18,6 +18,14 @@
 
     <header>
       <div class="logo">Expense Tracker</div>
+      <div class="header-actions">
+      <div class="user-actions">
+        <button id="user-add">Add User</button>
+        
+        <select id="user-switch">    
+        </select>
+      </div>
+      </div>
     </header>
 
     <div class="layout">
@@ -32,8 +40,8 @@
           <div id="middle">
         
           <div class="user-profile">
-            <img src="assets/bear.png" alt="User Image" class="user-photo" />
-            <h3 class="user-name">Arun</h3>
+            <img src="" alt="User Image" id="user-photo" />
+            <h3 id="user-name">Arun</h3>
           </div>
           <div class="future-expenses">
             <h4>Future Expenses</h4>
@@ -99,7 +107,7 @@
                 <td>Aise hi</td>
               </tr> -->
             </table>
-            <button>Analyze</button>
+            <!-- <button>Analyze</button> -->
           </div>
           </div>
         </main>
@@ -126,7 +134,7 @@
                 <input type="text" id="group-name" >
                 <label for="group-description">Group Description</label>
                 <input type="text" id="group-description">
-                <
+                
               </form>
             </div>
             
@@ -142,6 +150,7 @@
         </main>
       </div>
     </div>
+    <script src="userHandling.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
