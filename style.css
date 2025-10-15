@@ -383,4 +383,54 @@ header{
 }
 #group-creation{
     display:none;
+    margin:10px;
+    padding:10px;
+    border:1px solid #715A5A;
+    border-radius:10px;
+    height:100%;
+}
+
+#group-creation-form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+#group-creation-form h1{
+    font-size:1.3rem;
+    color:#d3dad9;
+    margin-bottom:15px;
+   
+}
+
+#group-creation-form h3{
+    font-size:1rem;
+    color:#d3dad9;
+    margin-bottom:15px;
+    font-weight:700;
+}
+#list-of-users-for-groups{
+    list-style: none;
+    color:#D3DAD9;
+    height:100px;
+    overflow:scroll;
+    scrollbar-width:thin;
+    scroll-behavior: smooth;
+}
+#list-of-users-for-groups input[type="checkbox"]{
+    margin-right:5px;
+
+    
+}
+#group-creation-form button{
+    width:100%;
+    padding:5px;
+    background:#44444e;
+    color:#D3DAD9;
+    border:1px solid #715A5A;
+    font-family: "Sansation";
+    font-size:1rem;
+}
+#group-creation-form button:hover{
+    background: linear-gradient(to right,#5a4a4a,#715A5A);
 }

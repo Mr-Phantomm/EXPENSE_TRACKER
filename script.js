@@ -23,7 +23,7 @@ groupAddIcon.addEventListener("click",()=>{
     groupRight.style.display="flex";
     groupCreation.style.display="flex";
     currentGroupRight=groupCreation.dataset.group;
-    console.log(currentGroupRight);
+    // console.log(currentGroupRight);
     }
     else{
         groupRight.style.display="none";

@@ -21,7 +21,6 @@
       <div class="header-actions">
       <div class="user-actions">
         <button id="user-add">Add User</button>
-        
         <select id="user-switch">    
         </select>
       </div>
@@ -130,11 +129,26 @@
           <div id="group-right">
             <div id="group-creation" data-group="groupCreate">
               <form id="group-creation-form">
-                <label for="group-name">Group name </label>
-                <input type="text" id="group-name" >
-                <label for="group-description">Group Description</label>
-                <input type="text" id="group-description">
+                <h1>Add Group</h1>
+
+                <div class="form-group">
+                  <label for="group-name">Group name </label>
+                  <input type="text" id="group-name" placeholder="Group Name" >
+                </div>
                 
+                <div class="form-group">
+                  <label for ="group-description">Group Description</label>
+                  <input type="text" id="group-description" placeholder="Group Description">
+                </div>
+
+                <div class="form-group">
+                  <h3>Select users for the Group</h3>
+                  <ul id="list-of-users-for-groups">
+                    <!-- <li><input type="checkbox" value="0"> Arun</li> -->
+                  </ul>
+                </div>
+                <button type="submit">Create</button>
+
               </form>
             </div>
             
@@ -152,5 +166,6 @@
     </div>
     <script src="userHandling.js"></script>
     <script src="script.js"></script>
+    <script src="groupHandling.js"></script>
   </body>
 </html>

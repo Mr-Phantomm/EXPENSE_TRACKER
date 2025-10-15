@@ -2,6 +2,7 @@ const UserAddButton=document.querySelector("#user-add");
 const userSwitch=document.querySelector("#user-switch");
 let id= parseInt(localStorage.getItem("CurrentUserId"))||0;
 let users=JSON.parse(localStorage.getItem("Users"))||[{'Id':0,"Name":"Arun"}];
+const listOfUsers=document.querySelector("#list-of-users-for-groups");
 
 users.forEach((user)=>{
     let item = document.createElement("option");
@@ -18,7 +19,10 @@ UserAddButton.addEventListener("click",()=>{
     let inputName=prompt("What is the new Users Name");
     if(inputName.length!=0){
         addUser(users.length,inputName);
+        addUserToGroupList(users.length-1,inputName)
+    
     }
+
 });
 
 function addUser(newId,newName){
@@ -29,11 +33,14 @@ function addUser(newId,newName){
     item.value=newId;
     item.innerHTML=`${newName}`;
     userSwitch.appendChild(item);
+    
+    
 }
 
 function switchUser(newId){
     id=newId;
     personalreload();
+    reloadUser(newId);
     localStorage.setItem("CurrentUserId",id.toString());
 }
 
