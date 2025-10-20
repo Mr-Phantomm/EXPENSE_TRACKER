@@ -19,6 +19,7 @@ let currentView="personal";
 
 // Group js
 groupAddIcon.addEventListener("click",()=>{
+    
     if(currentGroupRight!=="groupCreate"){
     groupRight.style.display="flex";
     groupCreation.style.display="flex";
@@ -29,9 +30,12 @@ groupAddIcon.addEventListener("click",()=>{
         groupRight.style.display="none";
         groupCreation.style.display="none";
         currentGroupRight="none";
-        console.log(currentGroupRight);
+        // console.log(currentGroupRight);
     }
 })
+
+
+
 
 //Personal
 function personalreload(){

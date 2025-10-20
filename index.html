@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Asimovian&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Expense Tracker</title>
   </head>
@@ -19,95 +22,105 @@
     <header>
       <div class="logo">Expense Tracker</div>
       <div class="header-actions">
-      <div class="user-actions">
-        <button id="user-add">Add User</button>
-        <select id="user-switch">    
-        </select>
-      </div>
+        <div class="user-actions">
+          <button id="user-add">Add User</button>
+          <select id="user-switch"></select>
+        </div>
       </div>
     </header>
 
     <div class="layout">
       <nav class="sidebar">
         <ul>
-          <li><a href="#" class="sidebar-link active" data-view="personal">Personal Expense</a></li>
-          <li><a href="#" class="sidebar-link" data-view="group">Group Expense</a></li>
+          <li>
+            <a href="#" class="sidebar-link active" data-view="personal"
+              >Personal Expense</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-view="group">Group Expense</a>
+          </li>
         </ul>
       </nav>
       <div id="personal">
         <main>
           <div id="middle">
-        
-          <div class="user-profile">
-            <img src="" alt="User Image" id="user-photo" />
-            <h3 id="user-name">Arun</h3>
-          </div>
-          <div class="future-expenses">
-            <h4>Future Expenses</h4>
-            <ul id="checklist"></ul>
-          </div>
+            <div class="user-profile">
+              <img src="" alt="User Image" id="user-photo" />
+              <h3 id="user-name">Arun</h3>
+            </div>
+            <div class="future-expenses">
+              <h4>Future Expenses</h4>
+              <ul id="checklist"></ul>
+            </div>
           </div>
           <div id="right">
-          <div id="right-top">
-            <form id="expense-form" class="expense-form">
-              <h4>Add Expense</h4>
-              <div class="form-group">
-                <label for="expense-type">Expense Type</label>
-                <select id="expense-type" required>
-                  <option value="" disabled selected>Select a type</option>
-                  <option value="Food">Food</option>
-                  <option value="Transport">Transport</option>
-                  <option value="Utilities">Utilities</option>
-                  <option value="Entertainment">Entertainment</option>
-                  <option value="Custom">Custom</option>
-                </select>
-                <input
-                  type="text"
-                  id="custom-expense-type"
-                  placeholder="Enter custom type"
-                  style="display: none"
-                />
-              </div>
-              <div class="form-group">
-                <label for="expense-amount">Amount</label>
-                <input
-                  type="number"
-                  id="expense-amount"
-                  placeholder="0.00"
-                  min="0"
-                  step="0.01"
-                  required
-                />
-              </div>
-               <div class="form-group">
-                 <label for="Description">Description </label>
-                <input type="text" id="Description" placeholder="Describe Expense"/>
-              </div>
-              <div class="form-group checkbox-group">
-                <input type="checkbox" id="add-to-checklist" />
-                <label for="add-to-checklist">Add To future expenses</label>
-              </div>
-              <button type="submit">Add</button>
-            </form>
-          </div>
-          <div id="right-bottom">
-            <h3>List of Expenses</h3>
-            <table id="list-of-expenses">
-              <tr>
-                <th>Sno.</th>
-                <th>Expense Type</th>
-                <th>Amount</th>
-                <th>Description</th>
-              </tr>
-              <!-- <tr>
+            <div id="right-top">
+              <form id="expense-form" class="expense-form">
+                <h4>Add Expense</h4>
+                <div class="form-group">
+                  <label for="expense-type">Expense Type</label>
+                  <select id="expense-type" required>
+                    <option value="" disabled selected>Select a type</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Custom">Custom</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="custom-expense-type"
+                    placeholder="Enter custom type"
+                    style="display: none"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="expense-amount">Amount</label>
+                  <input
+                    type="number"
+                    id="expense-amount"
+                    placeholder="0.00"
+                    min="0"
+                    step="0.01"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Description">Description </label>
+                  <input
+                    type="text"
+                    id="Description"
+                    placeholder="Describe Expense"
+                  />
+                </div>
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="add-to-checklist" />
+                  <label for="add-to-checklist">Add To future expenses</label>
+                </div>
+                <button type="submit">Add</button>
+              </form>
+            </div>
+            <div id="right-bottom">
+              <h3>List of Expenses</h3>
+              <div class="expenses-scroll-container">
+              <table id="list-of-expenses">
+                <tr>
+                  <th>Sno.</th>
+                  <th>Expense Type</th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                </tr>
+                <!-- <tr>
                 <td>1</td>
                 <td>kuchbhi</td>
                 <td>100</td>
                 <td>Aise hi</td>
               </tr> -->
-            </table>
-            <!-- <button>Analyze</button> -->
-          </div>
+              </table>
+              </div>
+              <!-- <button>Analyze</button> -->
+            </div>
           </div>
         </main>
       </div>
@@ -115,14 +128,14 @@
         <main>
           <div id="group-middle">
             <div id="group-top">
-              <span >Groups</span>
-              <i class="fa-solid fa-plus" id="group-add-icon"></i>            
+              <span>Groups</span>
+              <i class="fa-solid fa-plus" id="group-add-icon"></i>
             </div>
             <div id="group-bottom">
               <ul id="list-of-Groups">
-                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
-                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
-                <li><div id="Group-Name">Arun ka Group</div><div id=buttons><button id="AddExpense">Add Expense</button><button id="delete-group">Delete</button></div></li>
+                <!-- <li><div class="Group-Name">Arun ka Group</div><div class="buttons"><button class="AddExpense">Add Expense</button><button class="delete-group">Delete</button></div></li>
+                <li><div class="Group-Name">Arun ka Group</div><div class="buttons"><button class="AddExpense">Add Expense</button><button class="delete-group">Delete</button></div></li>
+                <li><div class="Group-Name">Arun ka Group</div><div class="buttons"><button class="AddExpense">Add Expense</button><button class="delete-group">Delete</button></div></li> -->
               </ul>
             </div>
           </div>
@@ -133,12 +146,16 @@
 
                 <div class="form-group">
                   <label for="group-name">Group name </label>
-                  <input type="text" id="group-name" placeholder="Group Name" >
+                  <input type="text" id="group-name" placeholder="Group Name" />
                 </div>
-                
+
                 <div class="form-group">
-                  <label for ="group-description">Group Description</label>
-                  <input type="text" id="group-description" placeholder="Group Description">
+                  <label for="group-description">Group Description</label>
+                  <input
+                    type="text"
+                    id="group-description"
+                    placeholder="Group Description"
+                  />
                 </div>
 
                 <div class="form-group">
@@ -148,17 +165,108 @@
                   </ul>
                 </div>
                 <button type="submit">Create</button>
-
               </form>
             </div>
-            
-            
+
             <div id="group-expense-addition" data-group="groupAddExpense">
-              
+
+              <form id="group-expense-form" class="expense-form">
+                <h4>Add Expense</h4>
+                <div class="form-group">
+                  <label for="expense-type">Expense Type</label>
+                  <select id="group-expense-type" required>
+                    <option value="" disabled selected>Select a type</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Custom">Custom</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="group-custom-expense-type"
+                    placeholder="Enter custom type"
+                    style="display: none"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="expense-amount">Amount</label>
+                  <input
+                    type="number"
+                    id="group-expense-amount"
+                    placeholder="0.00"
+                    min="0"
+                    step="0.01"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Description">Description </label>
+                  <input
+                    type="text"
+                    id="group-Description"
+                    placeholder="Describe Expense"
+                  />
+                </div>
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="group-add-to-checklist" />
+                  <label for="add-to-checklist">Add To future expenses</label>
+                </div>
+                <button type="submit">Add</button>
+              </form>
+            </div>
+
             </div>
 
             <div id="group-details" data-group="groupDetails">
-              
+              <div id="Group-Name-Details">Toofani Gang</div>
+              <hr />
+              <div id="Group-Desc-Details">
+                Description of the Group Described by the user
+              </div>
+              <div>
+                <div id="Group-users-Details">
+                  <div id="Sticky">
+                  <h3>Group Members</h3>
+                  <hr /></div>
+                  <ul id="List-of-Users">
+                    <li>Arun</li>
+                    <li>Ishita</li>
+                    <li>Arun</li>
+                    <li>Ishita</li>
+                    <li>Arun</li>
+                    <li>Ishita</li>
+                    <li>Arun</li>
+                    <li>Ishita</li>
+                    <li>Arun</li>
+                    <li>Ishita</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="Group-Expenses-Details">
+                <h3>List of Expenses</h3>
+                <div class="expenses-scroll-container">
+                  <table id="list-of-expenses2">
+                    <tr>
+                      <th>Sno.</th>
+                      <th>Expense Type</th>
+                      <th>Amount</th>
+                      <th>Description</th>
+                      <th>User</th>
+                    </tr>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Food</td>
+                        <td>100</td>
+                        <td>Hello Description</td>
+                        <td>Arun</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- <button>Analyze</button> -->
+              </div>
             </div>
           </div>
         </main>
@@ -167,5 +275,7 @@
     <script src="userHandling.js"></script>
     <script src="script.js"></script>
     <script src="groupHandling.js"></script>
+    <script src="groupDetails.js"></script>
+    <script src="expenseHandling.js"></script>
   </body>
 </html>

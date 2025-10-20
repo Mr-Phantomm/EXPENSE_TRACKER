@@ -281,9 +281,9 @@ header{
     font-size:1.3rem;
 }
 #list-of-expenses{
-    margin-top:10px;
     width:100%;
     border-collapse: collapse;
+
     
 }
 #list-of-expenses tr td , th,#list-of-expenses{
@@ -363,10 +363,16 @@ header{
     display: flex;
     justify-content: space-between;
 }
-#group-bottom ul li #Group-Name{
+#group-bottom ul li .Group-Name{
     color:#D3DAD9
 }
-#group-bottom ul li #buttons{
+
+#group-bottom ul li .Group-Name:hover{
+    cursor:pointer;
+    color:#d3dad96b
+}
+
+#group-bottom ul li .buttons{
     display:flex;
     gap:5px;
     justify-content: space-between;
@@ -379,6 +385,7 @@ header{
     flex-direction: column;
     flex-grow:1;
     height:100%;
+    
 
 }
 #group-creation{
@@ -434,3 +441,95 @@ header{
 #group-creation-form button:hover{
     background: linear-gradient(to right,#5a4a4a,#715A5A);
 }
+#group-details{
+    display: none;
+    flex-direction: column;
+    
+    border: 2px solid black;
+    margin:15px;
+    width:92%;
+    height:95%;
+    background-color: #29272d;
+    border-radius:10px;
+    color:#D3DAD9;
+    padding:10px;
+}
+#Group-Name-Details{
+    font-size:large; 
+    margin-bottom:5px;
+}
+#Group-Desc-Details{
+    margin-top:5px;
+    font-size:smaller;
+}
+#Group-users-Details{
+    margin-top:10px;
+    border:2px solid black;
+    background-color: #44444E;
+    overflow-y: auto;
+    width:30%;
+    padding:5px;
+    height:80%;
+}
+#Sticky{
+    position:sticky;
+    top:0;
+    background-color: #44444E;
+}
+#Group-users-Details #Sticky h3{
+    margin-bottom:5px;
+    
+}
+#Group-users-Details #Sticky hr{
+    margin-bottom:5px;
+    
+
+}
+#Group-users-Details #List-of-Users{
+    /* padding-top:10px; */
+    list-style: none;
+    line-height: 17px;
+    
+    min-height:150px;
+    scrollbar-width: thin;
+}
+#Group-Expenses-Details{
+    max-height:250px;
+    padding:10px;
+    background-color: #44444e;
+    border:2px solid black;
+    
+}
+.expenses-scroll-container {
+  max-height: 200px; 
+  overflow-y: auto;   
+  overflow-x: auto;   
+}
+#list-of-expenses th{
+   position:sticky;
+   top:0;
+   background-color:#29272d;
+   border:1px solid #D3DAD9;
+   z-index:1;
+}
+
+#list-of-expenses2{
+    width:100%;
+    border-collapse: collapse;
+
+    
+}
+#list-of-expenses2 tr td , th,#list-of-expenses{
+    border:1px solid #D3DAD9;
+}
+#list-of-expenses2 tr td{
+    padding-left:10px;
+}
+#list-of-expenses2 th{
+   position:sticky;
+   top:0;
+   background-color:#29272d;
+   border:1px solid #D3DAD9;
+   z-index:1;
+}
+
