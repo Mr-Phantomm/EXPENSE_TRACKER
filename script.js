@@ -19,8 +19,8 @@ let currentView="personal";
 
 // Group js
 groupAddIcon.addEventListener("click",()=>{
-    
     if(currentGroupRight!=="groupCreate"){
+    displayNoneRight();
     groupRight.style.display="flex";
     groupCreation.style.display="flex";
     currentGroupRight=groupCreation.dataset.group;

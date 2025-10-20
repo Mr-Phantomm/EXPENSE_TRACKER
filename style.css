@@ -533,3 +533,12 @@ header{
    z-index:1;
 }
 
+#group-expense-addition {
+    border:1px solid black;
+    width:95%;
+    height:95%;
+    margin:10px;
+}
+#group-expense-form{
+    width:100%;
+}

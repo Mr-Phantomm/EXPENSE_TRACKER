@@ -104,20 +104,20 @@
             <div id="right-bottom">
               <h3>List of Expenses</h3>
               <div class="expenses-scroll-container">
-              <table id="list-of-expenses">
-                <tr>
-                  <th>Sno.</th>
-                  <th>Expense Type</th>
-                  <th>Amount</th>
-                  <th>Description</th>
-                </tr>
-                <!-- <tr>
+                <table id="list-of-expenses">
+                  <tr>
+                    <th>Sno.</th>
+                    <th>Expense Type</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                  </tr>
+                  <!-- <tr>
                 <td>1</td>
                 <td>kuchbhi</td>
                 <td>100</td>
                 <td>Aise hi</td>
               </tr> -->
-              </table>
+                </table>
               </div>
               <!-- <button>Analyze</button> -->
             </div>
@@ -169,11 +169,10 @@
             </div>
 
             <div id="group-expense-addition" data-group="groupAddExpense">
-
               <form id="group-expense-form" class="expense-form">
                 <h4>Add Expense</h4>
                 <div class="form-group">
-                  <label for="expense-type">Expense Type</label>
+                  <label for="group-expense-type">Expense Type</label>
                   <select id="group-expense-type" required>
                     <option value="" disabled selected>Select a type</option>
                     <option value="Food">Food</option>
@@ -190,7 +189,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="expense-amount">Amount</label>
+                  <label for="group-expense-amount">Amount</label>
                   <input
                     type="number"
                     id="group-expense-amount"
@@ -201,21 +200,16 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="Description">Description </label>
+                  <label for="group-Description">Description </label>
                   <input
                     type="text"
                     id="group-Description"
                     placeholder="Describe Expense"
                   />
                 </div>
-                <div class="form-group checkbox-group">
-                  <input type="checkbox" id="group-add-to-checklist" />
-                  <label for="add-to-checklist">Add To future expenses</label>
-                </div>
+                
                 <button type="submit">Add</button>
               </form>
-            </div>
-
             </div>
 
             <div id="group-details" data-group="groupDetails">
@@ -227,8 +221,9 @@
               <div>
                 <div id="Group-users-Details">
                   <div id="Sticky">
-                  <h3>Group Members</h3>
-                  <hr /></div>
+                    <h3>Group Members</h3>
+                    <hr />
+                  </div>
                   <ul id="List-of-Users">
                     <li>Arun</li>
                     <li>Ishita</li>
@@ -254,7 +249,7 @@
                       <th>Description</th>
                       <th>User</th>
                     </tr>
-                    <tbody>
+                    
                       <tr>
                         <td>1</td>
                         <td>Food</td>
@@ -262,7 +257,7 @@
                         <td>Hello Description</td>
                         <td>Arun</td>
                       </tr>
-                    </tbody>
+                    
                   </table>
                 </div>
                 <!-- <button>Analyze</button> -->

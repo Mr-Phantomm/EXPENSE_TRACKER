@@ -5,12 +5,6 @@ const listOfGroups=document.querySelector("#list-of-Groups");
 
 const groups=JSON.parse(localStorage.getItem("groups"))||[];
 let groupId=groups.length;
-function clearGroupRight(){
-    groupRight.style.display="none";
-    groupCreation.style.display="none";
-    groupDetails.style.display="none";
-    currentGroupRight="none";
-}
 
 function reloadUser(newId){
     listOfUsers.innerHTML="";
