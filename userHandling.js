@@ -40,7 +40,7 @@ function switchUser(newId){
     personalreload();
     reloadUser(newId);
     reloadList(newId);
-    clearGroupRight();
+    
     localStorage.setItem("CurrentUserId",id.toString());
 }
 

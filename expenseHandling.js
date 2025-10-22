@@ -57,6 +57,7 @@ groupExpenseForm.addEventListener("submit",(e)=>{
     currentGroup.expenses.push(expense);
     localStorage.setItem("groups",JSON.stringify(groups));
     groupExpenseForm.reset();
+    displayNoneRight();
 })
 
 

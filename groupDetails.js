@@ -24,6 +24,7 @@ function loadGroupRight(group){
 
     let userstoLoad=group.usersInvolved;
     // console.log(userstoLoad);
+    let UsersinList=[]
     for(let i=0;i<userstoLoad.length;i++){
         let user=users.find((user)=>user.Id===parseInt(userstoLoad[i]));
         // console.log(user);
@@ -31,12 +32,24 @@ function loadGroupRight(group){
             let li=document.createElement("li");
             li.textContent=user.Name;
             groupUserList.appendChild(li);
+            UsersinList.push(user);
         }
     }
+    let correspondingExpenses=new Array(UsersinList.length).fill(0);
     let expense=group.expenses;
-    console.log(group);
+    let myExpense=0;
+    let otherExpense=0;
+   
     let srno=1;
     expense.forEach(ex => {
+        let index=UsersinList.findIndex(u=>u.Id===ex.user.Id);
+        if(UsersinList[index].Id==id){
+            myExpense+=parseInt(ex.amount);
+        }
+        else{
+            otherExpense+=parseInt(ex.amount);
+        }
+        correspondingExpenses[index]+=parseInt(ex.amount);
         let tr=document.createElement("tr");
         let td=document.createElement("td");
         td.textContent=srno;
@@ -48,6 +61,7 @@ function loadGroupRight(group){
         td3.textContent=ex.amount;
         let td4=document.createElement("td");
         td4.textContent=ex.desc;
+        // td4.classList.add("desc");
         let td5=document.createElement("td");
         td5.textContent=ex.user.Name;
         tr.appendChild(td2);
@@ -56,8 +70,10 @@ function loadGroupRight(group){
         tr.appendChild(td5);
         srno++;
         groupTable.appendChild(tr);
+        // console.log(correspondingExpenses);
     });
-
+    loadGraph(myExpense,otherExpense)
+    console.log(myExpense+" "+otherExpense);
 
 
 }

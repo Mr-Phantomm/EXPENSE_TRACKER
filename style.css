@@ -443,8 +443,7 @@ header{
 }
 #group-details{
     display: none;
-    flex-direction: column;
-    
+    flex-direction: column;   
     border: 2px solid black;
     margin:15px;
     width:92%;
@@ -490,7 +489,7 @@ header{
     list-style: none;
     line-height: 17px;
     
-    min-height:150px;
+    min-height:250px;
     scrollbar-width: thin;
 }
 #Group-Expenses-Details{
@@ -516,6 +515,7 @@ header{
 #list-of-expenses2{
     width:100%;
     border-collapse: collapse;
+    
 
     
 }
@@ -541,4 +541,13 @@ header{
 }
 #group-expense-form{
     width:100%;
+}
+#Graph-for-Users{
+    background-color: #D3DAD9;
+    margin:10px;
+    height:250px;
+    
+}
+#barchart{
+    
 }

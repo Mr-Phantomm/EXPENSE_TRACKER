@@ -218,7 +218,7 @@
               <div id="Group-Desc-Details">
                 Description of the Group Described by the user
               </div>
-              <div>
+              <div style="display:flex;justify-content: space-between;">
                 <div id="Group-users-Details">
                   <div id="Sticky">
                     <h3>Group Members</h3>
@@ -236,6 +236,10 @@
                     <li>Arun</li>
                     <li>Ishita</li>
                   </ul>
+                  
+                </div>
+                <div id="Graph-for-Users">
+                  <canvas id="barchart" width="300" height="250"></canvas>
                 </div>
               </div>
               <div id="Group-Expenses-Details">
@@ -272,5 +276,6 @@
     <script src="groupHandling.js"></script>
     <script src="groupDetails.js"></script>
     <script src="expenseHandling.js"></script>
+    <script src="barchart.js"></script>
   </body>
 </html>
